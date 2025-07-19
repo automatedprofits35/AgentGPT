@@ -1,0 +1,39 @@
+---
+title: Financial Tracking & Budgeting
+description: Manage personal and business finances with project job tracking
+---
+
+AgentGPT can be customized to help you track finances for both personal and business use. Key capabilities include:
+
+- **Income and expense tracking** for separate personal and business accounts.
+- **Budget management** with customizable categories and alerts when spending approaches your limits.
+- **Financial reports** such as cash flow statements, profit and loss, and balance sheets.
+- **Project job tracking** that monitors project budgets, expenses, revenue, and task completion.
+- **Visual dashboards** showing budget progress, cash flow, and project status.
+- **Integrations** with common accounting and project management tools.
+
+These features give you a single location to oversee day‑to‑day finances while keeping projects on schedule and on budget.
+
+## Installation & Setup
+
+Follow these steps to run AgentGPT with the financial tracking features enabled:
+
+1. **Clone the repository** and launch the setup script.
+   ```bash
+   git clone https://github.com/reworkd/AgentGPT.git
+   cd AgentGPT
+   ./setup.sh
+   ```
+2. **Provide API keys** for OpenAI and other services when prompted.
+3. **Choose `Docker-compose`** when asked how to run AgentGPT. The CLI will automatically spin up MySQL, the backend, and the Next.js frontend.
+4. Once the containers finish building, open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Log in and start creating budgets, recording transactions, and adding project jobs.
+
+If you prefer to run the services manually, use the commands printed by the CLI after setup:
+```bash
+# Frontend
+cd next && npm install && npm run dev
+# Backend
+cd platform && poetry install && poetry run python -m reworkd_platform
+```
+Ensure a MySQL database is running and that your `.env` files contain valid connection details.
